@@ -9,16 +9,18 @@ import {
   DirectionsContainer,
   RecipeBasicData,
 } from '../../../common/components';
-import { changeNumbersInString, combineFractions } from '../../../assets';
+import { changeNumbersInString, combineFractions } from '../../../utilts';
 import styles from './index.module.css';
 import PreparationTable from '../../../common/components/PreprationTable';
 import { RecipeProp } from '../../../common/types';
+
 const Recipe = () => {
   const [recipe, setRecipe] = useState<RecipeProp | any>({});
   const [defaultServing, setDefaultServing] = useState(0);
   const [defaultIngredients, setDefaultIngredients] = useState([]);
   const router = useRouter();
   const { id } = router.query;
+  
   useEffect(() => {
     async function fetchData() {
       const {
