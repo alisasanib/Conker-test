@@ -21,3 +21,5 @@ export { default as RecipeContainer } from './RecipeContainer';
 export { default as TagCard } from './TagCard';
 
 export { default as TagsContainer } from './TagsContainer';
+
+export { default as Loading } from './Loading';

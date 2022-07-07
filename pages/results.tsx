@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import axios from 'axios';
-import { RecipeCard, RecipeContainer } from '../common/components';
+import { Loading, RecipeCard, RecipeContainer } from '../common/components';
 import styles from '../styles/Home.module.css';
 import FilterContainer from '../common/components/FilterContainer';
 
@@ -32,7 +32,7 @@ const Results = () => {
       </h1>
       <div className={styles.resultsContainer}>
         <FilterContainer />
-        <RecipeContainer recipes={recipes} />
+        {isLoading ? <Loading /> : <RecipeContainer recipes={recipes} />}
       </div>
     </>
   );

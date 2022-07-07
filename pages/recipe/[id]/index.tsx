@@ -8,6 +8,7 @@ import {
   IngredientsContainer,
   DirectionsContainer,
   RecipeBasicData,
+  Loading,
 } from '../../../common/components';
 import { changeNumbersInString, combineFractions } from '../../../utilts';
 import styles from './index.module.css';
@@ -20,7 +21,7 @@ const Recipe = () => {
   const [defaultIngredients, setDefaultIngredients] = useState([]);
   const router = useRouter();
   const { id } = router.query;
-  
+
   useEffect(() => {
     async function fetchData() {
       const {
@@ -53,7 +54,7 @@ const Recipe = () => {
   return (
     <>
       <h2>Recipe: {id}</h2>
-      {recipe && Object.keys(recipe).length !== 0 && (
+      {recipe && Object.keys(recipe).length !== 0 ? (
         <main>
           <div
             className={styles.basicAndPrepContainer}
@@ -85,6 +86,8 @@ const Recipe = () => {
             <DirectionsContainer directions={recipe.directions} />
           </div>
         </main>
+      ) : (
+        <Loading />
       )}
     </>
   );
