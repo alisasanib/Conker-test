@@ -1,5 +1,6 @@
 html,
 body {
+  background: #c4c4c4;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -13,4 +14,14 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
 }
