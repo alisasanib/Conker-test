@@ -52,24 +52,27 @@ export function combineFractions(updated: any) {
         }
       }
       if (
-        !isNaN(Number(arrayOfIngredient[i])) &&
-        !isNaN(Number(arrayOfIngredient[i + 1]))
+        checkIfBothAreNumber(arrayOfIngredient[i], arrayOfIngredient[i + 1])
       ) {
-        arrayOfIngredient[i] =
-          Number(arrayOfIngredient[i]) + Number(arrayOfIngredient[i + 1]);
-        arrayOfIngredient.splice(i + 1, 1);
+        mergeTwoNumbers(arrayOfIngredient, i, i + 1);
       }
       if (
         arrayOfIngredient[i + 2] &&
-        !isNaN(Number(arrayOfIngredient[i])) &&
-        !isNaN(Number(arrayOfIngredient[i + 2]))
+        checkIfBothAreNumber(arrayOfIngredient[i], arrayOfIngredient[i + 2])
       ) {
-        arrayOfIngredient[i] =
-          Number(arrayOfIngredient[i]) + Number(arrayOfIngredient[i + 2]);
-        arrayOfIngredient.splice(i + 2, 1);
+        mergeTwoNumbers(arrayOfIngredient, i, i + 2);
       }
     }
     return arrayOfIngredient.join(' ');
   });
   return combineUpdated;
 }
+
+const checkIfBothAreNumber = (el1, el2) => {
+  return !isNaN(Number(el1)) && !isNaN(Number(el2));
+};
+
+const mergeTwoNumbers = (array, i, j) => {
+  array[i] = Number(array[i]) + Number(array[j]);
+  array.splice(j, 1);
+};
