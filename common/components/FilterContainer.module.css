@@ -1,7 +1,7 @@
 .filterContainer {
   width: 25vw;
   margin-right: 30px;
-  background: #ebebeb;
+  background: var(--skeleton-color);
   width: 28.5vw;
   padding: 15px;
   height: fit-content;
@@ -71,8 +71,8 @@
 }
 
 .filterResults {
-  background: rgb(220, 235, 17);
-  border: solid rgb(220, 235, 17) 1px;
+  background: var(--tag-color);
+  border: solid var(--tag-color) 1px;
   width: 70%;
   height: 60px;
   margin: auto;

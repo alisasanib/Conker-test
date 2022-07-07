@@ -25,3 +25,10 @@ a {
     font-size: 1rem;
   }
 }
+
+:root {
+  --tag-color: rgb(220, 235, 17);
+  --back-color: #c4c4c4;
+  --skeleton-color: #ebebeb;
+  --header-color: #282927;
+}

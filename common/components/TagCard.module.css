@@ -1,7 +1,7 @@
 .tag {
   padding: 10px;
   margin: 5px 10px 5px 0px;
-  background: rgb(220, 235, 17);
+  background: var(--tag-color);
   border-radius: 15px;
   border: grey 0.1px solid;
   cursor: pointer;

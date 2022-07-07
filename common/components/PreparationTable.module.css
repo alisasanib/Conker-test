@@ -29,7 +29,7 @@
   right: 0px;
   width: 30px;
   height: 30px;
-  background: #c4c4c4;
+  background: var(--back-color);
 }
 .prepRowTile {
   font-weight: bold;
