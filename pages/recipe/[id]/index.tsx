@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 import {
   RecipeCard,
   CustomCheckbox,
@@ -15,9 +16,11 @@ import styles from './index.module.css';
 import PreparationTable from '../../../common/components/PreprationTable';
 import { RecipeProp } from '../../../common/types';
 import { useFetchAndModifyRecipeData } from '../../../common/hooks';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Recipe = () => {
-  const { recipe, handleRecipeChange, id, defaultServing } = useFetchAndModifyRecipeData();
+  const { recipe, handleRecipeChange, id, defaultServing } =
+    useFetchAndModifyRecipeData();
   return (
     <>
       <h2>Recipe: {id}</h2>
@@ -56,6 +59,7 @@ const Recipe = () => {
       ) : (
         <Loading />
       )}
+      <ToastContainer />
     </>
   );
 };

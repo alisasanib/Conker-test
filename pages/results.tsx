@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 import { Loading, RecipeCard, RecipeContainer } from '../common/components';
 import styles from '../styles/Home.module.css';
 import FilterContainer from '../common/components/FilterContainer';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Results = () => {
   const [recipes, setRecipes] = useState([]);
@@ -14,13 +16,18 @@ const Results = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const recipesRes = await axios.get(
-        `/api/recipes?search=${search}${inc ? `&inc=${inc}` : ''}${
-          exc ? `&exc=${exc}` : ''
-        }`
-      );
-      setRecipes(recipesRes.data);
-      setIsLoading(false);
+      try {
+        const recipesRes = await axios.get(
+          `/api/recipes?search=${search}${inc ? `&inc=${inc}` : ''}${
+            exc ? `&exc=${exc}` : ''
+          }`
+        );
+        setRecipes(recipesRes.data);
+        setIsLoading(false);
+      } catch (e) {
+        toast.error('Something went wrong! Please try later');
+        console.log('Error: ', e);
+      }
     }
     fetchData();
   }, [search, inc, exc]);
@@ -33,6 +40,7 @@ const Results = () => {
       <div className={styles.resultsContainer}>
         <FilterContainer />
         {isLoading ? <Loading /> : <RecipeContainer recipes={recipes} />}
+        <ToastContainer />
       </div>
     </>
   );
