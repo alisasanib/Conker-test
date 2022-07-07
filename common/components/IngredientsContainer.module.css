@@ -12,14 +12,17 @@
   border: none;
   height: 100%;
   position: relative;
-  width: 40%;
+  width: 39%;
   font-size: 20px;
+  line-height: 40px;
+  background: #fff;
   text-align: center;
+  vertical-align: bottom;
 }
 
 .adjustContainer {
   /* float: right; */
-  background: white;
+  background: rgba(0, 0, 0, 0.05);
   width: 130px;
   display: inline-block;
   border: grey 1px solid;
