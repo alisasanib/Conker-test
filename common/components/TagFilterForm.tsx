@@ -22,12 +22,8 @@ const TagFilterForm = ({
 
   return (
     <>
-      <div style={{ marginTop: '15px' }}>{title}</div>
-      <form
-        action=""
-        style={{ marginBottom: '15px' }}
-        onSubmit={onsubmitHandler}
-      >
+      <div style={{ marginTop: '25px' }}>{title}</div>
+      <form action="" onSubmit={onsubmitHandler}>
         <input
           className={styles.filterInput}
           type="text"
@@ -42,6 +38,7 @@ const TagFilterForm = ({
         filters.map((filter: string, id: number) => {
           return (
             <label
+              style={{ marginRight: 10 }}
               className={
                 title === 'Include'
                   ? [styles.label, styles.green].join(' ')
