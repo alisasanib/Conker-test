@@ -15,10 +15,8 @@ const IngredientsContainer = ({
 }) => {
   return (
     <>
-      <div
-        className={styles.adjustContainer}
-        // style={{ float: 'right', width: '150px' }}
-      >
+      <h2>Ingredients</h2>
+      <div className={styles.adjustContainer}>
         <button className={styles.button} onClick={handleRecipeDecrement}>
           -
         </button>

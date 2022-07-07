@@ -17,7 +17,6 @@ const CustomCheckbox = ({
   isDirection?: boolean;
   detail?: string;
 }) => {
-
   const [checked, setChecked] = useState<boolean>(false);
 
   return (
@@ -37,31 +36,15 @@ const CustomCheckbox = ({
       <label style={labelStyle} htmlFor={`checkbox-${title}`}></label>
       <span
         onClick={() => setChecked((e) => !e)}
+        className={styles.checkboxMainLabel}
         style={{
-          ...{
-            marginLeft: 20,
-            lineHeight: '20px',
-            cursor: 'pointer',
-            position: 'absolute',
-            fontSize: '20px',
-            fontWeight: 'normal',
-          },
           ...titleStyle,
         }}
       >
         {title}
       </span>
       {detail && (
-        <span
-          style={{
-            display: 'block',
-            margin: '20px 0px',
-            fontSize: '18px',
-            fontWeight: 'normal',
-          }}
-        >
-          {detail}
-        </span>
+        <span className={styles.checkboxSecondaryLabel}>{detail}</span>
       )}
     </div>
   );

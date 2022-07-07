@@ -4,6 +4,7 @@ import CustomCheckbox from './CustomCheckbox';
 const DirectionsContainer = ({ directions }: { directions: string[] }) => {
   return (
     <>
+      <h2>Directions</h2>
       {directions.map((dir, id) => {
         return (
           <div role="direction" key={id}>
