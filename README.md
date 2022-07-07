@@ -10,25 +10,32 @@ npm run dev
 yarn dev
 ```
 
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+In order to run the tests, run below command:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm run test
+# or
+yarn test
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You can build project by running: 
 
-## Learn More
+```bash
+npm run build
+# or
+yarn build
+```
+## About Project
 
-To learn more about Next.js, take a look at the following resources:
+It's a recipe website that has been developed as the frontend test for Conker company.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Althoug it was not necesary to create APIs, I developed two endpoints to make it more professional. First one is for fetching all recipes (`api/recipes/`), and second one is for fetching one specific recipe (`api/recipes/[id]`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+I also implemented search, include, and excule queries to filter recipes response based on the filtered values recieved from the user.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Hope you enjpoy working with it :)
