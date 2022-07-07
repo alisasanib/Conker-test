@@ -1,0 +1,19 @@
+.ingredientContainer {
+  width: 70vw;
+}
+
+@media only screen and (max-width: 800px) {
+  .ingredientContainer {
+    width: 100%;
+  }
+}
+
+.basicAndPrepContainer {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .basicAndPrepContainer {
+    flex-direction: column;
+  }
+}

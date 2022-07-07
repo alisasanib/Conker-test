@@ -1,0 +1,28 @@
+.button {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  height: 100%;
+  position: relative;
+  width: 30%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.adjustText {
+  display: inline-block;
+  border: none;
+  height: 100%;
+  position: relative;
+  width: 40%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.adjustContainer {
+  /* float: right; */
+  background: white;
+  width: 130px;
+  display: inline-block;
+  border: grey 1px solid;
+  border-radius: 10px;
+  height: 40px;
+}

@@ -1,0 +1,10 @@
+.basicDataContainer {
+  margin-bottom: 20px;
+  width: 60vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .basicDataContainer {
+    width: 100%;
+  }
+}
