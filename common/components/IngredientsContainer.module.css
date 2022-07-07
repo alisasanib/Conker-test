@@ -1,18 +1,22 @@
 .button {
+  border: solid grey 0.1px;
   background: rgba(0, 0, 0, 0.05);
-  border: none;
-  height: 100%;
+  /* border: none; */
+  height: 40px;
   position: relative;
-  width: 30%;
+  width: 40px;
   font-size: 20px;
   cursor: pointer;
 }
 .adjustText {
   display: inline-block;
   border: none;
-  height: 100%;
+  height: 40px;
   position: relative;
-  width: 39%;
+  width: 100px;
+  border: solid grey 0.1px;
+  border-left: none;
+  border-right: none;
   font-size: 20px;
   line-height: 40px;
   background: #fff;
@@ -20,12 +24,13 @@
   vertical-align: bottom;
 }
 
-.adjustContainer {
-  /* float: right; */
-  background: rgba(0, 0, 0, 0.05);
-  width: 130px;
-  display: inline-block;
-  border: grey 1px solid;
-  border-radius: 10px;
-  height: 40px;
+@media only screen and (max-width: 600px) {
+  .adjustText {
+    width: 70px;
+    height: 35px;
+  }
+  .button {
+    width: 35px;
+    height: 35px;
+  }
 }

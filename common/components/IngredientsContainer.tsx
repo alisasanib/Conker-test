@@ -16,15 +16,21 @@ const IngredientsContainer = ({
   return (
     <>
       <h2>Ingredients</h2>
-      <div className={styles.adjustContainer}>
-        <button className={styles.button} onClick={handleRecipeDecrement}>
-          -
-        </button>
-        <span className={styles.adjustText}>{servings}</span>
-        <button className={styles.button} onClick={handleRecipeIncrement}>
-          +
-        </button>
-      </div>
+      <button
+        style={{ borderRadius: '10px 0px 0px 10px' }}
+        className={styles.button}
+        onClick={handleRecipeDecrement}
+      >
+        -
+      </button>
+      <span className={styles.adjustText}>{servings}</span>
+      <button
+        style={{ borderRadius: '0px 10px 10px 0px' }}
+        className={styles.button}
+        onClick={handleRecipeIncrement}
+      >
+        +
+      </button>
       {ingredients.map((element, id) => {
         return (
           <div role="ingredient" style={{ margin: '20px auto' }} key={id}>
