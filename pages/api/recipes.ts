@@ -16,8 +16,10 @@ export default function handler(
   if (searchPathStr) {
     updatedRec = updatedRec.filter(
       (rec, id) =>
-        rec.description.includes(searchPathStr) ||
-        rec.title.includes(searchPathStr)
+        rec.description.includes(searchPathStr.toLowerCase()) ||
+        rec.description.includes(searchPathStr.toUpperCase()) ||
+        rec.title.includes(searchPathStr.toLowerCase()) ||
+        rec.title.includes(searchPathStr.toUpperCase())
     );
   }
   const incPath = req.query.inc ?? '';
@@ -27,7 +29,7 @@ export default function handler(
     for (let i = 0; i < updatedRec.length; i++) {
       if (
         updatedRec[i].tags.filter((element) =>
-          incPathStr.split(',').includes(element)
+          incPathStr.toLowerCase().split(',').includes(element)
         ).length
       ) {
         continue;
@@ -45,7 +47,7 @@ export default function handler(
     for (let i = 0; i < updatedRec.length; i++) {
       if (
         updatedRec[i].tags.filter((element) =>
-          excPathStr.split(',').includes(element)
+          excPathStr.toLowerCase().split(',').includes(element)
         ).length
       ) {
         updatedRec.splice(i, 1);
