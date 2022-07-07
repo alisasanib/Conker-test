@@ -19,7 +19,7 @@ export function changeNumbersInString(
   return result;
 }
 
-export function combineFractions(updated: any) {
+export function combineFractions(updated: string[]) {
   const combineUpdated = updated.map((ingredient: any) => {
     const arrayOfIngredient = ingredient.trim().split(/\s+/);
     for (let i = 0; i < arrayOfIngredient.length - 2; i++) {
@@ -68,11 +68,11 @@ export function combineFractions(updated: any) {
   return combineUpdated;
 }
 
-const checkIfBothAreNumber = (el1, el2) => {
+const checkIfBothAreNumber = (el1: string, el2: string) => {
   return !isNaN(Number(el1)) && !isNaN(Number(el2));
 };
 
-const mergeTwoNumbers = (array, i, j) => {
+const mergeTwoNumbers = (array: number[], i: number, j: number) => {
   array[i] = Number(array[i]) + Number(array[j]);
   array.splice(j, 1);
 };
