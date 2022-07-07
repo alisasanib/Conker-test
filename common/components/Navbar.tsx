@@ -28,10 +28,6 @@ export default function Navbar() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <nav className={styles.navbarContainer}>
         <Link href="/">
