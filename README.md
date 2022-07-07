@@ -14,7 +14,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-In order to run the tests, run below command:
+In order to run the tests, run the below command:
 
 ```bash
 npm run test
@@ -22,7 +22,7 @@ npm run test
 yarn test
 ```
 
-You can build project by running: 
+You can build the project by running: 
 
 ```bash
 npm run build
@@ -31,11 +31,13 @@ yarn build
 ```
 ## About Project
 
-It's a recipe website that has been developed as the frontend test for Conker company.
+It's a recipe website developed as the frontend test for Conker company.
 
-Althoug it was not necesary to create APIs, I developed two endpoints to make it more professional. First one is for fetching all recipes (`api/recipes/`), and second one is for fetching one specific recipe (`api/recipes/[id]`).
+For your convenience, the project has been deployed to https://conker-frontend.vercel.app/ using vercel.
+
+Although it was not necessary to create APIs, I developed two endpoints to make it more professional. The first one is for fetching all recipes (`api/recipes/`), and the second one is for fetching one specific recipe (`api/recipes/[id]`).
 
 
-I also implemented search, include, and excule queries to filter recipes response based on the filtered values recieved from the user.
+I also implemented search, include, and exclude queries to filter recipes' responses based on the filtered values received from the user.
 
-Hope you enjpoy working with it :)
+Hope you enjoy working with it :)
