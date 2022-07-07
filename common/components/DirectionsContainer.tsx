@@ -1,5 +1,6 @@
 import React from 'react';
 import CustomCheckbox from './CustomCheckbox';
+
 const DirectionsContainer = ({ directions }: { directions: string[] }) => {
   return (
     <>

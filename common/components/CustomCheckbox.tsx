@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { evaluate, multiply, fraction, add, floor } from 'mathjs';
 import styles from './CustomCheckbox.module.css';
+
 const CustomCheckbox = ({
   title,
   labelStyle,
@@ -16,7 +17,9 @@ const CustomCheckbox = ({
   isDirection?: boolean;
   detail?: string;
 }) => {
+
   const [checked, setChecked] = useState<boolean>(false);
+
   return (
     <div
       className={styles.round}

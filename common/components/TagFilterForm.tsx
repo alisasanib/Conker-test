@@ -19,6 +19,7 @@ const TagFilterForm = ({
     handleSubmit(currentFilter);
     setCurrentFilter('');
   };
+
   return (
     <>
       <div style={{ marginTop: '15px' }}>{title}</div>

@@ -21,6 +21,7 @@ jest.mock('next/router', () => ({
 
 describe('search component', () => {
   it('renders search data correctly', async () => {
+    
     const mockData = { data: [recipes[0]] };
 
     // Mock returning your value
