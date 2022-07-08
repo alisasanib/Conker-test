@@ -10,9 +10,9 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const { id } = req.query;
+  const { id: queryId } = req.query;
   const selectedRecipe: RecipeProp = recipes.filter(
-    ({ id }: { id: number }) => id == Number(id)
+    ({ id }: { id: number }) => id === Number(queryId)
   )[0];
 
   res.status(200).json(selectedRecipe);

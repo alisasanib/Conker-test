@@ -45,7 +45,8 @@ export const useFetchAndModifyRecipeData = () => {
   }, [recipe.servings]);
 
   function handleRecipeChange(value: number) {
-    setRecipe({ ...recipe, servings: recipe.servings + value });
+    if (value + recipe.servings > 0)
+      setRecipe({ ...recipe, servings: recipe.servings + value });
   }
 
   return { recipe, handleRecipeChange, id, defaultServing };
