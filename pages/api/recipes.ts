@@ -11,7 +11,7 @@ export default function handler(
   const searchPathStr =
     typeof searchPath === 'string' ? searchPath : searchPath[0];
 
-  let updatedRec = recipes;
+  let updatedRec = [...recipes];
 
   if (searchPathStr) {
     updatedRec = updatedRec.filter(

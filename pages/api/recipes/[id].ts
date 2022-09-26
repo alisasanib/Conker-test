@@ -11,7 +11,7 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   const { id: queryId } = req.query;
-  const selectedRecipe: RecipeProp = recipes.filter(
+  const selectedRecipe: RecipeProp = [...recipes].filter(
     ({ id }: { id: number }) => id === Number(queryId)
   )[0];
 
