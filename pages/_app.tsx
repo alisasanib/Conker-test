@@ -4,7 +4,6 @@ import type { AppProps } from 'next/app';
 import Layout from '../common/components/Layout';
 import NProgress from 'nprogress'; //nprogress module
 import 'nprogress/nprogress.css'; //styles of nprogress
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import '../styles/globals.css';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
